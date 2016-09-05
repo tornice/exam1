@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	/*
+	var age = window.prompt("나이를 입력해 주세요.");
+	age = 30 + age;
+	alert("결과는 " + age);
+	*/
+	
+	var colorDefault = 0xff;
+	var calcPlus = false;
+	
+	var changeBG = function(){
+// 		var color = Math.random()*0xffffff;
+// 		color = parseInt(color);
+// 		color = color.toString(16);
+
+		console.log(typeof(colorDefault));
+		console.log(colorDefault);
+		
+		if( colorDefault <= 16 ) {
+			calcPlus = true;
+		} else if( colorDefault >= 255 ) {
+			calcPlus = false;
+		}
+		
+		if( calcPlus ) {
+			colorDefault += 2;
+		} else {
+			colorDefault -= 2;
+		}
+		
+		var strColor = colorDefault.toString(16);
+
+		console.log("#"+strColor+strColor+strColor);
+
+		document.getElementById("changebg").style.backgroundColor = "#"+strColor+strColor+strColor;
+	};
+// 	setInterval(changeBG,1);
+	
+</script>
+</head>
+<body id="changebg">
+
+</body>
+</html>
